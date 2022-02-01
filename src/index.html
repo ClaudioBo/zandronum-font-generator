@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zandronum Font Preview</title>
+    <link rel="stylesheet" href="styletest.css">
+</head>
+
+<body>
+    <img id="test" src="">
+    <input type="text" value="Wow some \c[x1]Testing" oninput="doShit(this);">
+</body>
+<script src="zanfont_coords.js"></script>
+<script src="zanfont_colors.js"></script>
+<script src="zanfont.js"></script>
+<script>
+    const doShit = (e) => {
+        const value = e.value;
+        createPNG("test", value)
+    }
+    createPNG("test", "Wow some \\c[x1]Testing");
+</script>
+
+</html>
