@@ -11,7 +11,8 @@
 
 <body>
     <img id="test" src="">
-    <input type="text" value="Wow some \c[x1]Testing" oninput="doShit(this);">
+    <br>
+    <input type="text" value="Wow some \c[x1]tests!" oninput="doShit(this);">
 </body>
 <script src="zanfont_coords.js"></script>
 <script src="zanfont_colors.js"></script>
@@ -21,7 +22,7 @@
         const value = e.value;
         createPNG("test", value)
     }
-    createPNG("test", "Wow some \\c[x1]Testing");
+    createPNG("test", "Wow some \\c[x1]tests!");
 </script>
 
 </html>
