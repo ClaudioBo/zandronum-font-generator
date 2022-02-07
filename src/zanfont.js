@@ -32,7 +32,9 @@ const drawLetters = (ctx, text, font) => {
     width_index = 0;
     text = text.toLowerCase();
     let color_char = "c";
+    let character_length = 0
     for (var i = 0; i < text.length; i++) {
+        if (character_length > 31) break;
         let letter = text.charAt(i)
         if (letter == "\\") {
             if (text.charAt(i + 1) == "c") {
@@ -47,12 +49,13 @@ const drawLetters = (ctx, text, font) => {
                 continue;
             }
         }
-        if(!font_coords[font][letter]) continue 
+        if (!font_coords[font][letter]) continue
         const { x1, x2 } = font_coords[font][letter];
         const letter_width = (x2 - x1);
         ctx.drawImage(font == "bigfont" ? bigFontImg : smallFontImg, x1, 0, letter_width, 15, width_index, 0, letter_width, 15);
         colorFont(ctx, color_char, width_index, letter_width);
         width_index += letter_width;
+        character_length++
     }
 }
 
