@@ -12,17 +12,27 @@
 <body>
     <img id="test" src="">
     <br>
-    <input type="text" value="Wow some \c[x1]tests!" oninput="doShit(this);">
+    <input id="text" type="text" value="Wow some \c[x1]tests!" oninput="changeText(this.value);">
+    <select id="font" onchange="changeFont(this.value);">
+        <option default value="bigfont">Big Font</option>
+        <option value="smallfont">Small Font</option>
+    </select>
 </body>
 <script src="zanfont_coords.js"></script>
 <script src="zanfont_colors.js"></script>
 <script src="zanfont.js"></script>
 <script>
-    const doShit = (e) => {
-        const value = e.value;
-        createPNG("test", value)
+    let text = "Wow some \\c[x1]tests!"
+    let font = "bigfont"
+    const changeText = (e) => {
+        text = e
+        createPNG("test", text, font);
     }
-    createPNG("test", "Wow some \\c[x1]tests!");
+    const changeFont = (e) => {
+        font = e
+        createPNG("test", text, font);
+    }
+    createPNG("test", text, font);
 </script>
 
 </html>
