@@ -18,7 +18,12 @@ You can load **./src/index.html** into your browser.
 <img id="place_text_here">
 
 /* Then you call the function */
-createPNG("place_text_here", "Wow some \c[x1]tests!");
+/* Possible fonts are: bigfont, smallfont */
+createPNG("place_text_here", "Wow some \c[x1]tests!", "bigfont");
 ```
 
-And boila!
+And boila, if you use bigfont you'll get:  
+![Output Image 1](tools/output1.png)
+
+And if you use smallfont:  
+![Output Image 2](tools/output2.png)
