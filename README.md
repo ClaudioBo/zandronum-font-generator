@@ -5,11 +5,22 @@ A tool for generating Doom's text using special ZDoom/Zandronum's TEXTCOLO using
 [ZDoom Text Colors](https://zdoom.org/wiki/Print#Colors)  
 [Zandronum Text Colors](https://zandronum.com/forum/viewtopic.php?p=46018#p46018)
 
-## Demo example:
+## To-Do list
+- [x] Re-organize the images and JSON on a /data/ folder to fetch externally
+- [x] Don't use Base64 images hardcoded in the code
+- [x] Don't use .js files with dict to load the JSONs
+- [x] Make the ZanFont class a little better to handle with a instance
+- [x] Put `const` on variables instead of `var` or `let` where possible
+- [x] Add to ZanFont the possibility to read custom URLs when initializing
+- [ ] Rewrite/refactor `zanfont.js` to be less awful
+- [ ] Allow to use your own fonts (only possible via custom URLs loading)
+- [ ] Create your own `font-coords.json` via a Python script (I don't know how did I generated the default font-coords.json... 😶)
+
+## Demo example
 You can [check the live preview](https://www.claudiobo.com/zandronum-font/)  
 or you can load **`./src/index.html`** into your browser.
 
-## Implementation example:
+## Implementation example
 ```java
 /* First, after the closing </body> tag you need to import zanfont.js */
 <script src="zanfont.js"></script>
