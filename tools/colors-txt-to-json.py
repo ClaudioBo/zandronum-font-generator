@@ -1,7 +1,10 @@
+# Read TEXTCOLO lumps and convert them into JSON
+# https://zdoom.org/wiki/TEXTCOLO
+
 import json
 
-textcolor = open('defaultcolors.txt').readlines()
-newtextcolor = open('newtextcolors.txt').readlines()
+textcolor = open("gzdoom-defaultcolors.txt").readlines()
+newtextcolor = open("fuzzballfox-newtextcolors.txt").readlines()
 
 output = {}
 
@@ -10,7 +13,7 @@ current_color_properties = None
 
 ignore_until_bracket = False
 
-for line in textcolor+newtextcolor:
+for line in textcolor + newtextcolor:
     if "//" in line or "\n" == line or "{" in line:
         continue
     line = " ".join(line.replace("\t", "").split())
@@ -28,8 +31,7 @@ for line in textcolor+newtextcolor:
             if len(splitted_props) == 4:
                 min_place = int(splitted_props[2])
                 max_place = int(splitted_props[3])
-            gradient_array = [splitted_props[0],
-                              splitted_props[1], min_place, max_place]
+            gradient_array = [splitted_props[0], splitted_props[1], min_place, max_place]
             current_color_properties.append(gradient_array)
         elif "}" in line:
             output[current_color_colorcode] = current_color_properties
@@ -37,7 +39,7 @@ for line in textcolor+newtextcolor:
             current_color_colorcode = None
             current_color_properties = None
 
-output_f = open("font_colors.json", "w").writelines(json.dumps(output))
+output_f = open("colors.json", "w").writelines(json.dumps(output))
 
 # [
 #     "a1": [

@@ -5,34 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zandronum Font Preview</title>
     <link rel="stylesheet" href="style.css">
+    <title>Zandronum Font Generator</title>
 </head>
 
 <body>
-    <img id="test" src="">
+    <img id="zanfont-canvas"></img>
     <br>
-    <input id="text" type="text" value="Wow some \c[x1]tests!" oninput="changeText(this.value);">
-    <select id="font" onchange="changeFont(this.value);">
+    <input id="textInput" type="text" value="Wow some \c[x1]tests!" disabled>
+    <select id="fontChooser" disabled>
         <option default value="bigfont">Big Font</option>
         <option value="smallfont">Small Font</option>
     </select>
 </body>
-<script src="zanfont_coords.js"></script>
-<script src="zanfont_colors.js"></script>
 <script src="zanfont.js"></script>
 <script>
-    let text = "Wow some \\c[x1]tests!"
-    let font = "bigfont"
-    const changeText = (e) => {
-        text = e
-        zandro_draw("test", text, font);
+    const imageId = "zanfont-canvas"
+    const readyCallback = () => {
+        const textInputElement = document.getElementById("textInput")
+        const fontChooserElement = document.getElementById("fontChooser")
+        if (!textInputElement || !fontChooserElement) return
+
+        textInputElement.disabled = false
+        fontChooserElement.disabled = false
+
+        textInputElement.addEventListener("input", e => zanFontInstance.createPNG(imageId, textInputElement.value, fontChooserElement.value))
+        fontChooserElement.addEventListener("change", e => zanFontInstance.createPNG(imageId, textInputElement.value, fontChooserElement.value))
+
+        zanFontInstance.createPNG(imageId, textInputElement.value, fontChooserElement.value)
     }
-    const changeFont = (e) => {
-        font = e
-        zandro_draw("test", text, font);
-    }
-    zandro_draw("test", text, font);
+    const zanFontInstance = new ZanFont(readyCallback)
 </script>
 
 </html>

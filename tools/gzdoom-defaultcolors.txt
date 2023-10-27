@@ -1,3 +1,5 @@
+// Source: https://github.com/ZDoom/gzdoom/blob/master/wadsrc/static/textcolors.txt
+
 Brick
 {
 	#470000  #FFB8B8
