@@ -4,8 +4,8 @@ class ZanFont {
         readyCallback, urlsDict = {
             bigFontURL: "https://raw.githubusercontent.com/ClaudioBo/zandronum_font_previewer/master/data/dbigfont.png",
             smallFontURL: "https://raw.githubusercontent.com/ClaudioBo/zandronum_font_previewer/master/data/dsmallfont.png",
-            colorsJSONURL: "https://raw.githubusercontent.com/ClaudioBo/zandronum_font_previewer/master/data/font-coords.json",
-            fontCoordsJSONURL: "https://raw.githubusercontent.com/ClaudioBo/zandronum_font_previewer/master/data/colors.json"
+            colorsJSONURL: "https://raw.githubusercontent.com/ClaudioBo/zandronum_font_previewer/master/data/colors.json",
+            fontCoordsJSONURL: "https://raw.githubusercontent.com/ClaudioBo/zandronum_font_previewer/master/data/font-coords.json"
             // bigFontURL: "https://www.claudiobo.com/zandronum-font/dbigfont.png",
             // smallFontURL: "https://www.claudiobo.com/zandronum-font/dsmallfont.png",
             // colorsJSONURL: "https://www.claudiobo.com/zandronum-font/colors.json",

@@ -5,7 +5,7 @@ A tool for showing Doom font using special Zandronum's TEXTCOLOR using Javascrip
 [Zandronum Text Colors](https://zandronum.com/forum/viewtopic.php?p=46018#p46018)
 
 ## Demo example:
-You can load **./src/index.html** into your browser.
+You can load **./src/index.html** into your browser.  
 or go to [the live preview](https://www.claudiobo.com/zandronum-font/)
 
 ## Implementation example:
