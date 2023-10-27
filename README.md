@@ -1,12 +1,13 @@
-# Zandronum Font Previewer/Generator
-A tool for showing Doom font using special Zandronum's TEXTCOLOR using Javascript Canvas
+# Zandronum Font Generator/Previewer
+A tool for generating Doom's text using special ZDoom/Zandronum's TEXTCOLO using Javascript Canvas
 
+[ZDoom TEXTCOLO](https://zdoom.org/wiki/TEXTCOLO)  
 [ZDoom Text Colors](https://zdoom.org/wiki/Print#Colors)  
 [Zandronum Text Colors](https://zandronum.com/forum/viewtopic.php?p=46018#p46018)
 
 ## Demo example:
-You can load **./src/index.html** into your browser.  
-or go to [the live preview](https://www.claudiobo.com/zandronum-font/)
+You can [check the live preview](https://www.claudiobo.com/zandronum-font/)  
+or you can load **`./src/index.html`** into your browser.
 
 ## Implementation example:
 ```java
